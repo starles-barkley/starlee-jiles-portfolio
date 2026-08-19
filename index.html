@@ -3,29 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Starlee Jiles — Software Engineer</title>
-<meta name="description" content="Starlee Jiles — Software Engineer & Full-Stack Developer based in Broken Arrow, Oklahoma. Epic-certified analyst building practical business applications.">
-
+<title>Starlee Jiles</title>
+<meta name="description" content="Starlee Jiles builds websites and custom digital solutions built around how you actually work.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="site-header" id="top">
+<header class="site-header">
   <div class="wrap header-inner">
-    <a href="#top" class="logo">Starlee Jiles</a>
+    <a href="index.html" class="logo">Starlee Jiles</a>
     <nav class="nav" id="nav">
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#skills">Skills</a>
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a href="index.html" class="is-active">Home</a>
+      <a href="services.html">Services</a>
+      <a href="examples.html">Examples</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
     </nav>
-    <a href="resume.pdf" class="btn btn-outline nav-resume" download>Resume</a>
+    <a href="contact.html" class="btn btn-outline">Contact</a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
@@ -35,263 +32,72 @@
 <!-- ============ HERO ============ -->
 <section class="hero">
   <div class="wrap hero-inner">
-    <p class="eyebrow"><span class="rule" aria-hidden="true"></span>Broken Arrow, Oklahoma</p>
-    <h1>Starlee Jiles</h1>
-    <p class="role">Software Engineer &amp; Full-Stack Developer</p>
-    <p class="hero-bio">I build practical software that makes real work easier. I'm a software engineer and Epic-certified analyst with experience developing business applications, automating document workflows, and maintaining software used by real organizations.</p>
-    <div class="hero-ctas">
-      <a href="#projects" class="btn btn-primary">View My Work</a>
-      <a href="#contact" class="btn btn-outline">Contact Me</a>
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="rule" aria-hidden="true"></span>Starlee Jiles</p>
+      <h1>Websites and custom solutions built around how you actually work.</h1>
+      <p class="hero-intro">I help individuals, small businesses, and organizations turn their ideas and everyday challenges into clear, useful digital solutions. Whether you need a professional website or something more specialized, we can start with the problem you want to solve — not the technical terminology.</p>
+      <div class="hero-ctas">
+        <a href="services.html" class="btn btn-primary">Explore What I Build</a>
+        <a href="contact.html" class="btn btn-outline">Tell Me Your Idea</a>
+      </div>
     </div>
-    <ul class="hero-meta">
-      <li>Epic HIM Analyst</li>
-      <li>Contract Software Engineer</li>
-      <li>Available for freelance projects</li>
-    </ul>
+    <!-- EDIT: replace with a real professional photograph -->
+    <div class="photo-placeholder" aria-hidden="true">
+      <div class="monogram">SJ</div>
+      <p class="caption">Photo coming soon</p>
+    </div>
   </div>
 </section>
 
-<!-- ============ FEATURED PROJECTS ============ -->
-<!-- EDIT: replace each .project-media placeholder with a real screenshot —
-     swap the placeholder <div> for an <img src="..." alt="..."> of the same
-     size. Keep images ~1200px wide for a crisp look on large screens. -->
-<section class="section" id="projects">
+<!-- ============ SERVICE PREVIEWS ============ -->
+<section class="section section-alt">
   <div class="wrap">
-    <p class="eyebrow"><span class="rule" aria-hidden="true"></span>Featured Projects</p>
-    <h2>Selected work</h2>
-
-    <div class="project-list">
-
-      <article class="project-feature">
-        <div class="project-media" aria-hidden="true">
-          <span>Legal Document Generation Software</span>
-        </div>
-        <div class="project-body">
-          <h3>Legal Document Generation Software</h3>
-          <p>Proprietary software designed and developed for Coffman &amp; Seidenberger, PLLC to streamline the creation of legal documents and reduce repetitive manual work. I continue to maintain and enhance the firm's applications as a contract software engineer.</p>
-          <div class="tags tags-sm"><span>Document automation</span><span>Legal tech</span><span>Ongoing maintenance</span></div>
-          <p class="project-link project-link-private">Private Application</p>
-        </div>
-      </article>
-
-      <article class="project-feature">
-        <div class="project-media" aria-hidden="true">
-          <span>Late Night BBQ</span>
-        </div>
-        <div class="project-body">
-          <h3>Late Night BBQ</h3>
-          <p>A live website developed for a real Tulsa-area restaurant, built to help customers find hours, menu information, and location at a glance.</p>
-          <div class="tags tags-sm"><span>Client site</span><span>Live in production</span></div>
-          <a class="project-link" href="https://latenightbbq.com" target="_blank" rel="noopener">Visit site →</a>
-        </div>
-      </article>
-
-      <article class="project-feature">
-        <div class="project-media" aria-hidden="true">
-          <span>HobbyMate</span>
-        </div>
-        <div class="project-body">
-          <h3>HobbyMate</h3>
-          <p>A responsive full-stack application that recommends hobbies based on users' interests and allows them to create an account and save information for later.</p>
-          <div class="tags tags-sm"><span>Full-stack</span><span>Accounts &amp; auth</span></div>
-          <!-- EDIT: add a live/GitHub link once available -->
-          <a class="project-link" href="#">[ADD LINK] →</a>
-        </div>
-      </article>
-
-      <article class="project-feature">
-        <div class="project-media" aria-hidden="true">
-          <span>Mandela Effect Quiz</span>
-        </div>
-        <div class="project-body">
-          <h3>Mandela Effect Quiz</h3>
-          <p>A responsive, interactive quiz built with HTML, CSS, JavaScript, and Bootstrap, exploring shared false memories through an engaging, easy-to-use interface.</p>
-          <div class="tags tags-sm"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Bootstrap</span></div>
-          <!-- EDIT: add a live/GitHub link once available -->
-          <a class="project-link" href="#">[ADD LINK] →</a>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- ============ PROFESSIONAL EXPERIENCE ============ -->
-<section class="section section-alt" id="experience">
-  <div class="wrap">
-    <p class="eyebrow"><span class="rule" aria-hidden="true"></span>Professional Experience</p>
-    <h2>Where I've worked</h2>
-
-    <div class="experience-list">
-      <div class="experience-item">
-        <div class="experience-when">
-          <!-- EDIT: add real date range -->
-          <p>[Start] – Present</p>
-        </div>
-        <div class="experience-what">
-          <h3>Contract Software Engineer</h3>
-          <p class="experience-org">Coffman &amp; Seidenberger, PLLC</p>
-          <p>Built and continue to maintain custom applications for the firm, including proprietary legal-document generation software that reduces manual, repetitive work for attorneys and staff.</p>
-        </div>
+    <div class="preview-grid">
+      <div class="preview-card">
+        <h3>A Simple, Professional Website</h3>
+        <p>For individuals and small businesses that need a polished, trustworthy place online.</p>
+        <a href="services.html#simple" class="card-link">Learn more →</a>
       </div>
-
-      <div class="experience-item">
-        <div class="experience-when">
-          <!-- EDIT: add real date range -->
-          <p>[Start] – Present</p>
-        </div>
-        <div class="experience-what">
-          <h3>Epic HIM Analyst</h3>
-          <p class="experience-org">Muscogee Nation Department of Health</p>
-          <p>Configure, test, document, and support Epic workflows within a healthcare environment, with a focus on practical usability and reliable production support.</p>
-        </div>
+      <div class="preview-card">
+        <h3>A More Advanced Website</h3>
+        <p>For businesses that need additional pages, custom features, forms, scheduling, content management, or other interactive functionality.</p>
+        <a href="services.html#advanced" class="card-link">Learn more →</a>
+      </div>
+      <div class="preview-card">
+        <h3>Something Different</h3>
+        <p>For an idea, repetitive task, or operational problem that may need a custom tool rather than a traditional website.</p>
+        <a href="services.html#custom" class="card-link">Learn more →</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ TECHNICAL SKILLS ============ -->
-<section class="section" id="skills">
-  <div class="wrap">
-    <p class="eyebrow"><span class="rule" aria-hidden="true"></span>Technical Skills</p>
-    <h2>What I work with</h2>
-
-    <div class="skills-grid">
-      <div class="skill-group">
-        <h3>Languages</h3>
-        <div class="tags">
-          <span>Python</span><span>JavaScript</span><span>C</span><span>SQL</span><span>HTML</span><span>CSS</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <h3>Frameworks &amp; Libraries</h3>
-        <div class="tags">
-          <span>React</span><span>Node.js</span><span>Bootstrap</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <h3>Databases &amp; Platforms</h3>
-        <div class="tags">
-          <span>MySQL</span><span>Firebase</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <h3>Tools</h3>
-        <div class="tags">
-          <span>Git</span><span>GitHub</span><span>Docker</span><span>Vercel</span>
-        </div>
-      </div>
-      <div class="skill-group skill-group-wide">
-        <h3>Healthcare IT &amp; Analysis</h3>
-        <div class="tags">
-          <span>Epic configuration</span><span>Application testing</span><span>Workflow analysis</span><span>Technical documentation</span><span>User training</span><span>Production support</span>
-        </div>
-      </div>
-    </div>
+<!-- ============ CREDIBILITY ============ -->
+<section class="section">
+  <div class="wrap center measure">
+    <p class="eyebrow center"><span class="rule" aria-hidden="true"></span>Real experience behind the technology</p>
+    <h2>Real experience behind the technology</h2>
+    <p>My background includes four years of legal administrative experience and work across healthcare, retail, delivery services, ministry, and software development. I bring that practical perspective to every project because a solution should fit the people using it — not force people to work around the technology.</p>
   </div>
 </section>
 
-<!-- ============ FREELANCE SERVICES ============ -->
-<section class="section section-alt" id="services">
-  <div class="wrap">
-    <p class="eyebrow"><span class="rule" aria-hidden="true"></span>How I Can Help</p>
-    <h2>Freelance &amp; contract work</h2>
-    <p class="services-sub">Outside of my full-time role, I take on select freelance and contract projects — from a small business's first website to internal tools that save a team hours of manual work.</p>
-
-    <div class="services-grid">
-      <div class="service-item">
-        <h3>Small business websites</h3>
-        <p>Clean, professional sites that give a business credibility online and make it easy for customers to reach them.</p>
-      </div>
-      <div class="service-item">
-        <h3>Custom internal tools</h3>
-        <p>Purpose-built applications for a specific workflow, instead of forcing a team to adapt to off-the-shelf software.</p>
-      </div>
-      <div class="service-item">
-        <h3>Workflow automation</h3>
-        <p>Identifying repetitive manual steps and building software to handle them reliably and consistently.</p>
-      </div>
-      <div class="service-item">
-        <h3>Document generation</h3>
-        <p>Systems that assemble accurate, consistent documents from templates and data, cutting down repetitive drafting work.</p>
-      </div>
-      <div class="service-item">
-        <h3>Integrations</h3>
-        <p>Connecting existing tools and data sources so information moves automatically instead of being copied by hand.</p>
-      </div>
-      <div class="service-item">
-        <h3>Ongoing maintenance</h3>
-        <p>Continued support and enhancement for applications already in production, so they keep working as needs change.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ ABOUT ============ -->
-<section class="section" id="about">
-  <div class="wrap about-inner">
-    <div>
-      <p class="eyebrow"><span class="rule" aria-hidden="true"></span>About</p>
-      <h2>A bit more background</h2>
-      <p>I work as an Epic HIM Analyst, where I spend my days on application testing, workflow analysis, and production support inside a healthcare system — experience that shapes how I build software: practical, well-documented, and built around how people actually work, not just how a system is supposed to work on paper.</p>
-      <p>Outside of that role, I work as a contract software engineer and independently design, build, and maintain applications, applying the full-stack development background I built at Atlas School. I like projects that sit at the intersection of usability and technical rigor — clean interfaces backed by solid, well-tested code.</p>
-    </div>
-    <div class="about-facts">
-      <div class="fact">
-        <p class="fact-label">Education</p>
-        <p class="fact-value">Computer Science &amp; Full-Stack Web Development, Atlas School — 2025</p>
-      </div>
-      <div class="fact">
-        <p class="fact-label">Current roles</p>
-        <p class="fact-value">Epic HIM Analyst &amp; Contract Software Engineer</p>
-      </div>
-      <div class="fact">
-        <p class="fact-label">Based in</p>
-        <p class="fact-value">Broken Arrow, Oklahoma</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CONTACT ============ -->
-<section class="section section-alt" id="contact">
-  <div class="wrap contact-inner">
-    <div class="contact-copy">
-      <p class="eyebrow"><span class="rule" aria-hidden="true"></span>Contact</p>
-      <h2>Let's build something</h2>
-      <p>Open to freelance work, contract engagements, and full-time roles. The fastest way to reach me is the form, or drop me an email directly.</p>
-
-      <ul class="contact-links">
-        <li><a href="mailto:starlee.jiles@icloud.com">starlee.jiles@icloud.com</a></li>
-        <li><a href="https://github.com/Starles-Barkley" target="_blank" rel="noopener">GitHub ↗</a></li>
-        <li><a href="https://www.linkedin.com/in/starleejiles/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
-      </ul>
-    </div>
-
-    <!-- Formspree-powered form. Replace YOUR_FORM_ID once you create a free
-         form at formspree.io — see README.md for the exact steps. -->
-    <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-      <div class="form-row">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required>
-      </div>
-      <div class="form-row">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="_replyto" required>
-      </div>
-      <div class="form-row">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary" style="width:100%">Send message</button>
-      <p class="form-note" id="formNote" role="status"></p>
-    </form>
+<!-- ============ CTA ============ -->
+<section class="section-navy section-tight">
+  <div class="wrap cta-strip">
+    <h2>Have an idea worth talking through?</h2>
+    <a href="contact.html" class="btn btn-outline">Get in Touch</a>
   </div>
 </section>
 
 <footer class="site-footer">
   <div class="wrap footer-inner">
-    <p>Starlee Jiles — Software Engineer</p>
+    <p>Starlee Jiles</p>
+    <nav class="footer-nav">
+      <a href="services.html">Services</a>
+      <a href="examples.html">Examples</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
     <p>&copy; <span id="year"></span></p>
   </div>
 </footer>
