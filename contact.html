@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Starlee Jiles</title>
+<meta name="description" content="Tell Starlee Jiles about your business, your idea, or something you wish worked better.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="index.html" class="logo">Starlee Jiles</a>
+    <nav class="nav" id="nav">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="examples.html">Examples</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="is-active">Contact</a>
+    </nav>
+    <a href="contact.html" class="btn btn-outline">Contact</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="section section-tight">
+  <div class="wrap">
+    <p class="eyebrow"><span class="rule" aria-hidden="true"></span>Contact</p>
+    <h1>Tell me what you have in mind.</h1>
+    <p class="measure">You don't need a technical plan before reaching out. Tell me about your business, your idea, or something you wish worked better, and we can figure out what makes sense from there.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="wrap contact-layout">
+
+    <!-- Formspree-powered form. Replace YOUR_FORM_ID once you create a
+         free form at formspree.io — see README.md for the exact steps. -->
+    <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <div class="form-row">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="_replyto" required>
+      </div>
+      <div class="form-row">
+        <label for="org">Business or organization <span style="font-weight:400;">(optional)</span></label>
+        <input type="text" id="org" name="organization">
+      </div>
+      <div class="form-row">
+        <label for="interest">What are you interested in?</label>
+        <select id="interest" name="interest">
+          <option value="Simple website">Simple website</option>
+          <option value="Advanced website">Advanced website</option>
+          <option value="Custom idea or tool">Custom idea or tool</option>
+          <option value="Not sure yet">Not sure yet</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary" style="width:100%">Send message</button>
+      <p class="form-note" id="formNote" role="status"></p>
+    </form>
+
+    <div class="contact-secondary">
+      <p>Prefer to reach out directly?</p>
+      <div class="links">
+        <a href="mailto:starlee.jiles@icloud.com">starlee.jiles@icloud.com</a>
+        <a href="https://www.linkedin.com/in/starleejiles/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/Starles-Barkley" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p>Starlee Jiles</p>
+    <nav class="footer-nav">
+      <a href="services.html">Services</a>
+      <a href="examples.html">Examples</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <p>&copy; <span id="year"></span></p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
