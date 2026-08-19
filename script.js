@@ -2,17 +2,19 @@
 const navToggle = document.getElementById('navToggle');
 const nav = document.getElementById('nav');
 
-navToggle.addEventListener('click', () => {
-  const isOpen = nav.classList.toggle('is-open');
-  navToggle.setAttribute('aria-expanded', isOpen);
-});
+if (navToggle && nav) {
+  navToggle.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('is-open');
+    navToggle.setAttribute('aria-expanded', isOpen);
+  });
 
-nav.querySelectorAll('a').forEach((link) => {
-  link.addEventListener('click', () => nav.classList.remove('is-open'));
-});
+  nav.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => nav.classList.remove('is-open'));
+  });
+}
 
-// Contact form — submits to Formspree via fetch so we can show an inline
-// confirmation instead of redirecting the user off the page.
+// Contact form (contact.html only) — submits to Formspree via fetch so we
+// can show an inline confirmation instead of redirecting off the page.
 const form = document.getElementById('contactForm');
 const formNote = document.getElementById('formNote');
 
@@ -40,6 +42,6 @@ if (form) {
   });
 }
 
-// Footer year
+// Footer year (present on every page)
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
