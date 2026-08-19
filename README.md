@@ -15,24 +15,11 @@ README.md       This file
 
 ## Before you deploy — things to finish
 
-### 1. Add your photo (Home and About pages)
-Both `index.html` and `about.html` currently show an elegant placeholder
-(a navy panel with your initials) where a real photo should go. In each
-file, replace:
-```html
-<div class="photo-placeholder" aria-hidden="true">
-  <div class="monogram">SJ</div>
-  <p class="caption">Photo coming soon</p>
-</div>
-```
-with:
-```html
-<div class="photo-placeholder">
-  <img src="images/starlee.jpg" alt="Starlee Jiles">
-</div>
-```
-Create an `images/` folder next to `index.html` for the photo file. A
-portrait-oriented photo (roughly 4:5, e.g. 800×1000px) will fit the frame
+### 1. Swap in a more formal photo later, if you want (Home and About pages)
+Both pages currently use `images/starlee.jpg`. If you'd like a more
+polished or professional shot later, just replace that file with the new
+one (keep the same filename, or update the `src` in `index.html` and
+`about.html`). A portrait-oriented photo (roughly 4:5) will fit the frame
 best.
 
 ### 2. Add real screenshots (Examples page)
