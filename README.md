@@ -1,48 +1,71 @@
 # Starlee Jiles — Personal Site
 
-Static site (`index.html` + `style.css` + `script.js`), no build step, no
-dependencies. Sections: hero, skills, projects, about, contact.
+A true multi-page static site, no build step, no dependencies:
 
-## Before you deploy — 3 things to finish
+```
+index.html      Home
+services.html   Services (Simple / Advanced / Custom)
+examples.html   Examples of past and demo work
+about.html      About
+contact.html    Contact form
+style.css       Shared theme tokens + styles for every page
+script.js       Shared mobile nav + Formspree submit handling
+README.md       This file
+```
 
-### 1. Finish your website packages (`index.html`, `#work` section)
-Package 01 ("Small Business Starter") is live and links to your real demo
-site. Packages 02 and 03 are still placeholders — search for
-`[Package Name]` and `[EDIT:` to fill in the tier name, description,
-price, feature tags, and demo link. Delete a whole
-`<article class="project-card">` block if you want fewer than 3 tiers, or
-copy one for more.
+## Before you deploy — things to finish
 
-### 2. Set up the contact form (Formspree)
+### 1. Add your photo (Home and About pages)
+Both `index.html` and `about.html` currently show an elegant placeholder
+(a navy panel with your initials) where a real photo should go. In each
+file, replace:
+```html
+<div class="photo-placeholder" aria-hidden="true">
+  <div class="monogram">SJ</div>
+  <p class="caption">Photo coming soon</p>
+</div>
+```
+with:
+```html
+<div class="photo-placeholder">
+  <img src="images/starlee.jpg" alt="Starlee Jiles">
+</div>
+```
+Create an `images/` folder next to `index.html` for the photo file. A
+portrait-oriented photo (roughly 4:5, e.g. 800×1000px) will fit the frame
+best.
+
+### 2. Add real screenshots (Examples page)
+The two example cards in `examples.html` currently show a colored
+placeholder panel with the site name instead of a screenshot. Replace:
+```html
+<div class="browser-body" aria-hidden="true">Late Night BBQ</div>
+```
+with:
+```html
+<div class="browser-body">
+  <img src="images/late-night-bbq.png" alt="Late Night BBQ website screenshot">
+</div>
+```
+and the same for the small business demo. You may also want to add
+`object-fit: cover; width: 100%; height: 100%;` in `style.css` under
+`.browser-body img` if the screenshot's proportions don't match the frame.
+
+### 3. Set up the contact form (Formspree)
 1. Go to [formspree.io](https://formspree.io) and create a free account
    with `starlee.jiles@icloud.com`.
 2. Create a new form — Formspree gives you a form ID like `xayzabcd`.
-3. In `index.html`, find this line in the `<form>` tag:
+3. In `contact.html`, find this line in the `<form>` tag:
    ```html
    action="https://formspree.io/f/YOUR_FORM_ID"
    ```
    Replace `YOUR_FORM_ID` with your real ID.
-4. Formspree emails a verification link the first time you submit the
-   form for real — confirm it or messages won't arrive.
+4. Formspree emails a verification link the first time the form is
+   submitted for real — confirm it or messages won't arrive.
 
-That's it — `script.js` already handles the submit with `fetch`, so
-submitting shows an inline "Thanks — I'll get back to you soon." message
-instead of redirecting away from your site.
-
-### 3. Add your resume
-Export your resume as `resume.pdf` and drop it in this same folder,
-next to `index.html`. The "Resume" button in the header already links to
-`resume.pdf` and will download it — no code changes needed once the file
-is in place.
-
-## Also worth doing
-
-- **GitHub / LinkedIn links** — in the `#contact` section of
-  `index.html`, replace the two `href="#"` placeholders next to "GitHub ↗"
-  and "LinkedIn ↗" with your real profile URLs.
-- **Favicon / social preview image** — optional, but nice to have before
-  sharing the link widely. Add a `favicon.ico` and reference it in
-  `<head>` if you want one.
+`script.js` already handles the submit with `fetch`, so submitting shows
+an inline "Thanks — I'll get back to you soon." message instead of
+redirecting away from the site.
 
 ## Running it locally
 
@@ -50,7 +73,9 @@ No install needed:
 ```bash
 python3 -m http.server 8000
 ```
-then open `http://localhost:8000`. Or `npx serve .` if you'd rather use Node.
+then open `http://localhost:8000`. Each page is a separate file — visit
+`http://localhost:8000/services.html`, `/examples.html`, etc. directly,
+or just click through the nav.
 
 ## Deploying to Vercel
 
@@ -58,18 +83,9 @@ then open `http://localhost:8000`. Or `npx serve .` if you'd rather use Node.
 2. On [vercel.com](https://vercel.com) → **Add New Project** → import the
    repo.
 3. Framework preset: **Other**, build command: blank. Deploy.
-4. You'll get a free `your-project.vercel.app` URL immediately.
+4. You'll get a free `your-project.vercel.app` URL. Every `.html` file in
+   the repo becomes its own route automatically (e.g. `/services.html`).
 
-To add a real domain later (e.g. `starleejiles.com`), go to the Vercel
-project's **Settings → Domains**, add the domain, and update the DNS
-records Vercel shows you at your registrar. No code changes required.
-
-## File structure
-
-```
-index.html      All markup + content
-style.css       Theme tokens at top (colors/fonts), then layout styles
-script.js       Mobile nav + Formspree submit handling
-resume.pdf      Add this yourself (see step 3 above)
-README.md       This file
-```
+To add a real domain later, go to the Vercel project's
+**Settings → Domains**, add the domain, and update the DNS records Vercel
+shows you at your registrar. No code changes required.
