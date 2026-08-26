@@ -206,11 +206,22 @@ ul { list-style: none; margin: 0; padding: 0; }
 .about-hero p { font-size: 1rem; }
 
 @media (max-width: 860px) {
-  .about-hero .photo-placeholder {
-    position: static;       /* turn off sticky entirely on mobile */
-    max-width: 220px;       /* shrink the photo down */
-    margin: 0 auto 1.5rem;  /* center it, add space before the bio starts */
+  .about-section {
+    padding-top: 32px;   /* tighter than the default 80px, just on mobile */
+
   }
+
+  .about-hero {
+    gap: 1rem;              /* less space needed for a vertical stack */
+  }
+
+  .about-hero .photo-placeholder {
+    position: static;
+    max-width: 220px;
+    margin: 0 auto;           /* drop the bottom margin — gap already spaces it from the text above */
+    order: -1;
+  }
+}
 }
 /* =========================================================================
    CONTACT PAGE
