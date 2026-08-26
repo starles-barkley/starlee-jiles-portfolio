@@ -116,6 +116,12 @@ ul { list-style: none; margin: 0; padding: 0; }
 .hero-intro { font-size: 1.08rem; max-width: 52ch; }
 .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 28px; }
 
+@media (max-width: 860px) {
+  .hero-inner .photo-placeholder {
+    order: 1;
+  }
+}
+
 /* =========================================================================
    HOME — SERVICE PREVIEW CARDS
    ========================================================================= */
@@ -187,18 +193,25 @@ ul { list-style: none; margin: 0; padding: 0; }
    ========================================================================= */
 .about-hero {
   display: grid;
-  grid-template-columns: 0.4fr 0.6fr;   /* adjust ratio to taste */
+  grid-template-columns: 0.4fr 0.6fr;
   gap: 3rem;
-  align-items: start;                    /* stop vertical centering */
+  align-items: start;
 }
 
 .about-hero .photo-placeholder {
   position: sticky;
-  top: calc(76px + 2rem);                /* clears the sticky header + breathing room */
+  top: calc(76px + 2rem);
 }
 
 .about-hero p { font-size: 1rem; }
 
+@media (max-width: 860px) {
+  .about-hero .photo-placeholder {
+    position: static;       /* turn off sticky entirely on mobile */
+    max-width: 220px;       /* shrink the photo down */
+    margin: 0 auto 1.5rem;  /* center it, add space before the bio starts */
+  }
+}
 /* =========================================================================
    CONTACT PAGE
    ========================================================================= */
