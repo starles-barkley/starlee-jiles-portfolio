@@ -186,26 +186,17 @@ ul { list-style: none; margin: 0; padding: 0; }
    ABOUT PAGE
    ========================================================================= */
 .about-hero {
-  display: flex;
-  align-items: flex-start;   /* stop the vertical centering */
-  gap: 3rem;                  /* adjust to match your existing spacing */
+  display: grid;
+  grid-template-columns: 0.4fr 0.6fr;   /* adjust ratio to taste */
+  gap: 3rem;
+  align-items: start;                    /* stop vertical centering */
 }
 
 .about-hero .photo-placeholder {
   position: sticky;
-  top: 2rem;                  /* space from top of viewport while scrolling */
-  flex: 0 0 400px;   /* fixed width, won't grow or shrink */
+  top: calc(76px + 2rem);                /* clears the sticky header + breathing room */
 }
 
-/* Turn off the sticky behavior on smaller screens, where it doesn't help */
-@media (max-width: 768px) {
-  .about-hero {
-    flex-direction: column;
-  }
-  .about-hero .photo-placeholder {
-    position: static;
-  }
-}
 .about-hero p { font-size: 1rem; }
 
 /* =========================================================================
