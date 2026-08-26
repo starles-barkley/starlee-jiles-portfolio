@@ -112,7 +112,6 @@ ul { list-style: none; margin: 0; padding: 0; }
    ========================================================================= */
 .hero { padding: 76px 0 88px; }
 .hero-inner { display: grid; grid-template-columns: 0.95fr 1.05fr; gap: 56px; align-items: center; }
-.hero-copy .eyebrow { }
 .hero-intro { font-size: 1.08rem; max-width: 52ch; }
 .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 28px; }
 
@@ -188,6 +187,8 @@ ul { list-style: none; margin: 0; padding: 0; }
 }
 .examples-soon h3 { color: var(--navy); margin-bottom: 8px; }
 
+.examples-grid { display: flex; flex-direction: column; gap: 40px; margin-top: 16px; }
+
 /* =========================================================================
    ABOUT PAGE
    ========================================================================= */
@@ -222,7 +223,7 @@ ul { list-style: none; margin: 0; padding: 0; }
     order: -1;
   }
 }
-}
+
 /* =========================================================================
    CONTACT PAGE
    ========================================================================= */
